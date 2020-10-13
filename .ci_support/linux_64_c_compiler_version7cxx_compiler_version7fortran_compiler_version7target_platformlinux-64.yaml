@@ -1,19 +1,11 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
 bzip2:
 - '1'
 c_compiler:
 - gcc
 c_compiler_version:
 - '7'
-cairo:
-- '1.16'
-cdt_arch:
-- aarch64
-cdt_name:
-- cos7
 channel_sources:
-- conda-forge
+- conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -21,15 +13,13 @@ cxx_compiler:
 cxx_compiler_version:
 - '7'
 docker_image:
-- condaforge/linux-anvil-aarch64
+- condaforge/linux-anvil-comp7
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
 - '7'
 freetype:
 - 2.9.1
-glib:
-- '2.58'
 gsl:
 - '2.6'
 icu:
@@ -56,16 +46,10 @@ libxml2:
 - '2.9'
 ncurses:
 - '6.2'
-pango:
-- '1.42'
 pin_run_as_build:
   bzip2:
     max_pin: x
-  cairo:
-    max_pin: x.x
   freetype:
-    max_pin: x
-  icu:
     max_pin: x
   jpeg:
     max_pin: x
@@ -83,8 +67,6 @@ pin_run_as_build:
     max_pin: x.x
   ncurses:
     max_pin: x.x
-  pango:
-    max_pin: x.x
   readline:
     max_pin: x
   tk:
@@ -96,10 +78,14 @@ pin_run_as_build:
 readline:
 - '8.0'
 target_platform:
-- linux-aarch64
+- linux-64
 tk:
 - '8.6'
 xz:
 - '5.2'
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+  - fortran_compiler_version
 zlib:
 - '1.2'

@@ -30,7 +30,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -87,14 +87,15 @@ requirements:
     - libpng                             # [not win]
     - bzip2                              # [not win]
     - {{ native }}bzip2                  # [win]
-    - cairo                              # [not win]
+      # REBUILD
+    - cairo 1.16                             # [not win]
     - {{ native }}libjpeg-turbo          # [win]
     - jpeg                               # [not win]
     - libiconv                           # [osx]
     - {{ native }}libiconv               # [win]
     - libuuid                            # [linux]
     - {{ native }}gmp                    # [win]
-    - glib                               # [linux]
+    - glib 2.66                               # [linux]
     - {{ native }}fftw                   # [win]
     - {{ native }}xz                     # [win]
     - {{ native }}mpfr                   # [win]
@@ -102,7 +103,8 @@ requirements:
     - {{ native }}bwidget
     - {{ native }}tktable
     - {{ native }}libpng                 # [win]
-    - pango                              # [not win]
+      # TODO: Rebuild
+    - pango 1.42                             # [not win]
     - {{ native }}icu                    # [win]
     - icu                                # [not win]
     - pcre2                              # [not win]
